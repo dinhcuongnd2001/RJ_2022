@@ -2,3 +2,14 @@
 DOM: Các thẻ này dùng làm gì, attribute. 
 Validation: RE
 React hook form + yup <tìm hiểu>
+7:29 PM 9/21/2022
+	tk: 890 3664 2806
+	mk: 439725
+1. Let & Const:
+	Let: phạm vi trong khối (Block Scope {})
+	var: có phạm vi trong hàm, toàn cục, có hoisting
+2. arrow function
+không có từ khóa this. nó sẽ lấy từ khóa this ở bên ngoài
+3. context https://viblo.asia/p/hieu-scope-va-context-trong-javascript-3P0lPArm5ox
+4. spread :
+
