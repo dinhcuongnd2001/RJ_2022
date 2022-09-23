@@ -18,5 +18,3 @@ class geometry extends info {
 
 const a = new geometry('hinh vuong', 'co 3 canh', 5);
 console.log(a.name);
-console.log(a.desc);
-console.log(a.caculate(a.length));
