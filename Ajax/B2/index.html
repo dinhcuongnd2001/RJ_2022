@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body{
+            display: flex;
+            box-sizing: border-box;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .main{
+            width: 30%;
+            margin: auto;
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .content-item{
+            margin: 10px 0 10px 0;
+            display: flex;
+        }
+        span{
+            min-width: 90px;
+        }
+        p{
+            display: inline-block;
+            margin: 0 ;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="body">
+        <h1 class="titel">API Weather</h1>
+        <div class="main">
+            <input class="input" type="text">
+            <button class="button">search</button>
+            <div class="content">
+                <div class="content-item">
+                    <span>Humidity:</span>    
+                    <p class="humidity"></p>
+                </div>
+                <div class="content-item">
+                    <span>Feels_like:</span>    
+                    <p class="feels_like"></p> °C
+                </div>
+                <div class="content-item">
+                    <span>Temp:</span>    
+                    <p class="temp"></p> °C
+                </div>
+                <div class="content-item">
+                    <span>Temp_Max:</span>    
+                    <p class="temp_max"></p> °C
+                </div>
+                <div class="content-item">
+                    <span>Temp_Min:</span>    
+                    <p class="temp_min"></p> °C
+                </div>
+                <div class="content-item">
+                    <span>Clouds:</span>    
+                    <p class="clouds"></p> 
+                </div>
+                <div class="content-item">
+                    <span>Wind:</span>
+                    <p class="wind"></p> m/s        
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
