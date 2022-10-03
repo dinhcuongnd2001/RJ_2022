@@ -1,4 +1,55 @@
+Meeting ID: 890 3664 2806
+Passcode: 439725
 7:16 PM 9/19/2022
 DOM: Các thẻ này dùng làm gì, attribute. 
 Validation: RE
 React hook form + yup <tìm hiểu>
+JS Asyn-Await
+1. Khi một bất đồng bộ xảy ra, giả sử là gọi hàm khác thì hàm mới sẽ được thêm vào timer hay như nào? và quy trình thực hiện như thế nào?
+2. giải thích về đoạn even loop
+3. this, bling
+4. 
+
+7:37 PM 9/25/2022 
+lập trình web, client-side lập trình bên phía client
+mục tiêu và thử thách trong front-end
+	tính linh hoạt (Accessibly)
+	hiệu nawnh (performance)
+	tốc độ phát triển (speedy development)
+Mô hình 7 tầng trong giao thức mạng (tìm hiểu về tầng application)
+----- kỹ năng cần để trở thành front-ended
++) Nên có bằng cấp cảu khoa học máy tính hoặc công nghệ thông tin
++) nắm rõ về HTML. CSS, js
++) hiểu hơn về server side, (middle layer)
++) Xử lý graphic desgin trên (figmax, pts)
++) tìm hiểu về SEO
++) kỹ năng xử lý vấn đề
++) kỹ năng giao tiếp.
++) twitter ()
+
+Case Study
+	Business request:
+trước khi code:
++) Phân tích dự án cần, công nghệ mà dự án cần
++) timeline
++) tech discussion (thảo luận xem front-end làm gì, back-end làm gì )
++) Estimation (ước tính)
+
+VD: khi có một trang web 
+trong khi code:
++) có những cái thay đổi
++) Những yêu cầu chấp nhận được và không chấp nhận được
++) Release: khi release mà gặp sự cố thì xử lý như thế nào? học về git
+
+10/2/2022
++) pure function: là hàm thuần khiết, trả về 1 kết quả nếu các đối số truyền vào là không đổi. (Nghĩa là nó không phụ thuộc vào trạng thái hoặc dữ liệu nào cũng như những sự thay đổi khi chương trình được chạy, chỉ phục thuộc vào các tham số đầu vào của nó)
+-> hàm này ko tạo ra bất kỳ ảnh hưởng nào đến các đối tượng khác, chẳng hạn như các request, input, output hoặc data mutation. 
++) Observable side effect: là bất kỳ sự tương tác nào với bên ngoài từ bên trong hàm 
+
++) các side Effect:
+Tạo HTTP request
+Thay đổi dữ liệu
+In dữ liệu ra console hay màn hình
+Thao tác với DOM
+Math.random()
+Lấy thời gian hiện tạir
