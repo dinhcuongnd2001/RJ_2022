@@ -6,7 +6,7 @@ const ContractForm = () => {
     username: "",
     email: "",
     phone: "",
-    number: "",
+    message: "",
   });
   const REGEX = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
   const validationSchema = Yup.object().shape({
@@ -26,7 +26,13 @@ const ContractForm = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  console.log(form);
+  const handleClick = (errors) => {
+    errors.username && errors.email && errors.phone && errors.message
+      ? alert("Successfully Login")
+      : alert("The fields must be required");
+    // console.log(errors);
+  };
+  //   console.log(form);
   return (
     <Formik
       initialValues={form}
@@ -77,7 +83,9 @@ const ContractForm = () => {
               <div>{errors.message}</div>
             ) : null}
             <br />
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={() => handleClick(errors)}>
+              Submit
+            </button>
           </Form>
         );
       }}
