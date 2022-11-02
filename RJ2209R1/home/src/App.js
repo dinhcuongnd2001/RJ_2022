@@ -9,7 +9,6 @@ function App() {
       <p>
         <Link to="login">Login</Link>
       </p>
-      {/* <Outlet /> */}
     </div>
   );
 }
