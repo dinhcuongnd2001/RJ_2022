@@ -1,0 +1,23 @@
+1. State
+	state và props tương tự nhau, nhưng state là private và được quản lý bới components
+	State là một object có thể được dùng để chứa dữ liệu hoặc thông tin về components, từ đó bạn có thể 	luân chuyển dữ liệu đến các thành phần trong Component và đến các Component khác.
+	Muốn thay đổi state thì dùng dùng setState để cập nhật không được thay đổi bằng cách gán trực tiếp, 	nếu gán trực tiếp components không ko render lại 
+Cấu hỏi 1. tại sao khi tính toán thì cần truyền vào setState là 1 function mà ko phải 1 object, nói về cơ chế cập nhật ui khi render 
+2. Sử dụng state một cách đúng đắn.
+	+) không thay đổi state một cách trực tiếp mà phải dùng setState để cập nhật;
+	+) Cập nhật trạng thái có thể không đồng bộ:
+		react có thể gọi nhiều setState() trong một lần update để tăng performance
+		Vì this.props và this.state có thể được cập nhật không đồng bộ, bạn không nên dựa vào giá 		trị của chúng để tính toán trạng thái tiếp theo.
+		
+2. LifeCycle of react
+	có 4 giai đoạn vòng đời của react
+	+) initialization:Đây là giai đoạn mà thành phần được xây dựng với các Props đã cho và trạng thái 		mặc định. Điều này được thực hiện trong phương thức khởi tạo Component Class  
+	+) Mouting:Giai đoạn này được thực hiện sau khi quá trình initialization(khởi tạo) được hoàn 			thành. Nó thực hiện nhiệm vụ chuyển virtual DOM (DOM ảo) trong React thành DOM và hiển thị 		trên trình duyệt.
+	+) Updating:là giai đoạn trạng thái của một thành phần được cập nhật và ứng dụng được render lại.
+	+) Unmoutting:là bước cuối cùng của vòng đời thành phần, nơi thành phần được xóa khỏi trang.
+3. Các method trong lifecycle react;
+
+5. Xử lý sự kiện trong React
+	
+	+)viết bằng camelCase
+	+) 
