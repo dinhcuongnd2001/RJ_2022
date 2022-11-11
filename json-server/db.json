@@ -1,19 +1,24 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "Cuong"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "name": "Hieu"
+    },
+    {
+      "id": 3,
+      "name": "Duy"
+    },
+    {
+      "id": 4,
+      "name": "Nghia"
+    },
+    {
+      "id": 5,
+      "name": "Tuan"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
