@@ -3,11 +3,22 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Info from "./components/TH3/Info";
+import AddComponent from "./components/TH3/AddComponent";
+import DataProvider from "./components/DataProvider";
+import UpdateComponent from "./components/TH3/UpdateComponent";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+root.render(
+  <DataProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}></Route>
+        <Route path="/TH2/info" element={<Info />}></Route>
+        <Route path="add" element={<AddComponent />} />
+        <Route path="update" element={<UpdateComponent />} />
+      </Routes>
+    </BrowserRouter>
+  </DataProvider>
+);
 reportWebVitals();
