@@ -1,14 +1,40 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import "bootstrap/dist/css/bootstrap.css";
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
-import Info from "./components/TH3/Info";
-import AddComponent from "./components/TH3/AddComponent";
+import { Typography, Divider } from "antd";
+import "./App.css";
+import TodoList from "./components/TodoList";
+import Filters from "./components/Filters";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment } from "./ReduxHome/InitialState";
+import { ActionAdd, ActionSub } from "./ReduxHome/Action";
+const { Title } = Typography;
+
 function App() {
+  // console.log(store);
+  // const dispatch = useDispatch();
+  // const count = useSelector((state) => {
+  //   console.log(state);
+  //   return state.value;
+  // });
   return (
-    <>
-      <Link to="TH2/info">TH2</Link>
-    </>
+    <div
+      style={{
+        position: "relative",
+        top: "35px",
+        width: 500,
+        margin: "0 auto",
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "white",
+        padding: 20,
+        boxShadow: "0 0 10px 4px #bfbfbf",
+        borderRadius: 5,
+        height: "90vh",
+      }}
+    >
+      <Title style={{ textAlign: "center" }}>TODO APP with REDUX</Title>
+      <Filters />
+      <Divider />
+      <TodoList />
+    </div>
   );
 }
 
