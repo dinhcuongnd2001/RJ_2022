@@ -7,15 +7,16 @@ const priorityColorMapping = {
   Low: "gray",
 };
 
-export default function Todo({ name, prioriry, complete }) {
+export default function Todo({ id, name, prioriry, complete }) {
   const dispatch = useDispatch();
-  // console.log("complete: ", complete);
+  console.log("complete: ", complete);
   const [checked, setChecked] = useState(complete);
-  // console.log(checked);
-
   const toggleCheckbox = () => {
     setChecked(!checked);
-    // dispatch({type: '' , payload: })
+    dispatch({
+      type: "TodoList/update",
+      payload: { id: id, name: name, prioriry: prioriry, complete: !checked },
+    });
   };
 
   return (

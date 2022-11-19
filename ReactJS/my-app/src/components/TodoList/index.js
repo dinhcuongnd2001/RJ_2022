@@ -14,7 +14,7 @@ export default function TodoList() {
     id: uuidv4(),
     name: "",
     prioriry: "medium",
-    complete: "false",
+    complete: false,
   });
 
   const handleChange = (e) => {
@@ -26,6 +26,7 @@ export default function TodoList() {
         {todolist.map((todo) => (
           <Todo
             key={todo.id}
+            id={todo.id}
             name={todo.name}
             prioriry={todo.prioriry}
             complete={todo.complete}
@@ -58,13 +59,13 @@ export default function TodoList() {
           <Button
             type="primary"
             onClick={() => {
+              dispatch(AddTodo(todo));
               setTodo({
                 id: uuidv4(),
                 name: "",
                 prioriry: "medium",
-                complete: "false",
+                complete: false,
               });
-              dispatch(AddTodo(todo));
             }}
           >
             Add

@@ -16,7 +16,16 @@ export const getToDoBySelect = createSelector(
   getStatus,
   getSearchText,
   (todos, status, text) => {
-    const filterTodo = todos.filter((todo) => todo.name.includes(text));
+    const filterTodo = todos.filter((todo) => {
+      if (status === "All") {
+        return todo.name.includes(text);
+      }
+      return (
+        todo.name.includes(text) &&
+        (status === "Completed" ? todo.complete : !todo.complete)
+      );
+    });
+
     return filterTodo;
   }
 );
