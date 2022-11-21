@@ -4,7 +4,7 @@ export const AddTodo = (data) => ({
 });
 
 export const SearchText = (data) => ({
-  type: "Filter/search",
+  type: "Filter/searchSelector",
   payload: data,
 });
 
@@ -12,5 +12,12 @@ export const statusFilterChange = (status) => {
   return {
     type: "Filter/statusFilterChange",
     payload: status,
+  };
+};
+
+export const priorityChange = (priority) => {
+  return {
+    type: "Filter/priorityChange",
+    payload: priority,
   };
 };

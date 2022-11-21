@@ -3,17 +3,18 @@ import Todo from "../Todo";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AddTodo } from "../../ReduxHome/Action";
+import todoSlice from "./TodoSlice";
 import { v4 as uuidv4 } from "uuid";
 import { getToDoBySelect, todoList as td } from "../../ReduxHome/selection";
 export default function TodoList() {
   const dispatch = useDispatch();
   const todolist = useSelector(getToDoBySelect);
-  const todo1 = useSelector(td);
-  console.log("danh sach todo:, ", todo1);
+  // const todo1 = useSelector(td);
+  // console.log("danh sach todo:, ", todo1);
   const [todo, setTodo] = useState({
     id: uuidv4(),
     name: "",
-    prioriry: "medium",
+    prioriry: "Medium",
     complete: false,
   });
 
@@ -59,11 +60,12 @@ export default function TodoList() {
           <Button
             type="primary"
             onClick={() => {
-              dispatch(AddTodo(todo));
+              // dispatch(AddTodo(todo));
+              dispatch(todoSlice.actions.add(todo));
               setTodo({
                 id: uuidv4(),
                 name: "",
-                prioriry: "medium",
+                prioriry: "Medium",
                 complete: false,
               });
             }}
