@@ -1,19 +1,12 @@
 import { Typography, Divider } from "antd";
 import "./App.css";
+// import TodoList from "./components/TodoList";
+// import Filters from "./components/Filters";
 import TodoList from "./components/TodoList";
-import Filters from "./components/Filters";
 import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "./ReduxHome/InitialState";
-import { ActionAdd, ActionSub } from "./ReduxHome/Action";
 const { Title } = Typography;
 
 function App() {
-  // console.log(store);
-  // const dispatch = useDispatch();
-  // const count = useSelector((state) => {
-  //   console.log(state);
-  //   return state.value;
-  // });
   return (
     <div
       style={{
@@ -30,9 +23,11 @@ function App() {
         height: "90vh",
       }}
     >
-      <Title style={{ textAlign: "center" }}>TODO APP with REDUX</Title>
+      {/* <Title style={{ textAlign: "center" }}>TODO APP with REDUX</Title>
       <Filters />
       <Divider />
+      <TodoList /> */}
+
       <TodoList />
     </div>
   );

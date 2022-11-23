@@ -1,10 +1,12 @@
 import axios from "axios";
-import { put, takeLatest } from "redux-saga/effects";
+import { put, takeEvery, takeLatest } from "redux-saga/effects";
 import {
   FETCH_USER,
   FETCH_USER_SUCCESS,
   LOGIN,
   LOGIN_SUCCESS,
+  DELETE,
+  DELETE_USER,
 } from "../redux/Action";
 
 const BaseURL = "https://jsonplaceholder.typicode.com/users";
@@ -27,11 +29,24 @@ function* authSagaFun(action) {
     yield put({ type: LOGIN_SUCCESS, payload: user });
     yield put({ type: FETCH_USER, payload: {} });
   } else {
-    console.log("ko dung mat khau");
+    alert("Tai Khoan Mat Khau Khong Dung");
+  }
+}
+
+function* deleteUser(action) {
+  const id = action.payload;
+  //   console.log(`${BaseURL}/${id}`);
+  try {
+    const response = yield axios.delete(`${BaseURL}/${id}`);
+    yield put({ type: FETCH_USER_SUCCESS, payload: response.data });
+  } catch (e) {
+    console.log(e);
   }
 }
 
 export default function* rootSaga() {
   yield takeLatest(LOGIN, authSagaFun);
   yield takeLatest(FETCH_USER, getUser);
+  // yield takeLatest(DELETE, deleteUser);
+  yield takeEvery(DELETE, deleteUser);
 }

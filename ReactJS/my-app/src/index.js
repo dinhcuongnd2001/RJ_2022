@@ -10,7 +10,7 @@ import { render } from "react-dom";
 // import AddComponent from "./components/TH3/AddComponent";
 // import DataProvider from "./components/DataProvider";
 // import UpdateComponent from "./components/TH3/UpdateComponent";
-import store from "./ReduxHome/store";
+import { store } from "./redux/store";
 import { Provider } from "react-redux";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
